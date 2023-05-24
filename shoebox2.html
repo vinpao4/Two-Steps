@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scatole Innovative per Scarpe</title>
+  <style>
+    /* Reset CSS */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Body styles */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #CFFFFE;
+      color: #333;
+    }
+
+    /* Header styles */
+    header {
+      background-color: #222;
+      padding: 20px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav ul li {
+      margin-right: 20px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #bbb;
+    }
+
+    /* Hero section styles */
+    .hero {
+      background-image: url("hero-background.jpg");
+      background-size: cover;
+      background-position: center;
+      height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+    }
+
+    .hero-content {
+      color: #222;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      text-align: center;
+    }
+
+    .brand-name {
+      font-size: 24px;
+      color: #007FFF;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .product-name {
+      font-size: 48px;
+      color: #007FFF;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      margin-top: 10px;
+    }
+
+    .impronta-icon {
+      width: 30px;
+      height: 30px;
+      margin-left: 10px;
+    }
+
+    .hero-content p {
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+
+    .cta-button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #00aaff;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 4px;
+      transition: background-color 0.3s;
+    }
+
+    .cta-button:hover {
+      background-color: #0077cc;
+    }
+
+    /* Features panel styles */
+    .features-panel {
+      display: none;
+      padding: 20px;
+      background-color: #CFFFFE;
+      text-align: center;
+      color: #333;
+    }
+
+    .features-panel.open {
+      display: block;
+    }
+
+    .features-panel h2 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .features-panel img {
+      max-width: 100%;
+      margin-bottom: 20px;
+    }
+
+    .features-panel p {
+      margin-bottom: 10px;
+    }
+
+    /* Description section styles */
+    .description {
+      display: none;
+      padding: 20px;
+      background-color: #CFFFFE;
+      text-align: center;
+      color: #333;
+    }
+
+    .description.open {
+      display: block;
+    }
+
+    .description h2 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .description p {
+      margin-bottom: 10px;
+    }
+
+/* pros section styles */
+    .pros {
+      display: none;
+      padding: 20px;
+      background-color: #CFFFFE;
+      text-align: center;
+      color: #333;
+    }
+
+    .pros.open {
+      display: block;
+    }
+
+    .pros h2 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .pros p {
+      margin-bottom: 10px;
+    }
+
+    /* Footer styles */
+    footer {
+      background-color: #222;
+      padding: 20px;
+      text-align: center;
+      color: #fff;
+    }
+
+    /* Stripes styles */
+    .stripes {
+      background-color: #ccc;
+      height: 5px;
+    }
+
+    .stripes-top {
+      margin-bottom: 30px;
+    }
+
+    .stripes-bottom {
+      margin-top: 30px;
+    }
+
+    /* Sneakers images styles */
+    .sneakers-image-top-left {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      width: 200px;
+      height: 200px;
+    }
+
+    .sneakers-image-bottom-right {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      width: 200px;
+      height: 200px;
+    }
+  </style>
+  <script>
+    window.addEventListener('DOMContentLoaded', function() {
+      var ctaButton = document.querySelector('.cta-button');
+      var featuresPanel = document.querySelector('.features-panel');
+      var descriptionPanel = document.querySelector('.description');
+       var prosPanel = document.querySelector('.pros');
+
+      ctaButton.addEventListener('click', function() {
+        featuresPanel.classList.toggle('open');
+        descriptionPanel.classList.toggle('open');
+        prosPanel.classList.toggle('open');
+      });
+    });
+  </script>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Discover the product</a></li>
+        <li><a href="#">Features</a></li>
+        <li><a href="#">Buy</a></li>
+        <li><a href="#">Contact us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="stripes stripes-top"></div>
+
+  <section class="hero">
+    <img src="sneakers1.png" alt="Sneakers" class="sneakers-image-top-left">
+    <div class="hero-content">
+      <h1><span class="brand-name">SHEOS</span><br>Innovative shoe box</h1>
+      <h2 class="product-name">TWO STEPS <img src="impronta.png" alt="Impronte" class="impronta-icon"></h2>
+      <p>Discover our revolutionary box that simplifies the transport and organisation of shoes</p>
+      <a href="#" class="cta-button">Show more</a>
+    </div>
+    <img src="sneakers1.png" alt="Sneakers" class="sneakers-image-bottom-right">
+  </section>
+
+  <div class="stripes stripes-bottom"></div>
+
+  <section class="features-panel">
+    <h2>Box features</h2>
+    <img src="shoe-box.jpg" alt="Scatola di Scarpe">
+    <p>Sizes: [35 cm x 12.5 cm x 13 cm] x 2</p>
+    <p>Shoe sizes: All sizes</p>
+    <p>Colour: Ivory</p>
+    <p>Curiosity: The box is made of environmentally friendly and recyclable materials</p>
+  </section>
+
+  <section class="description">
+    <h2>Description</h2>
+    <p>The innovative 'Two Steps' shoe box is a revolutionary product that transforms the way we transport and organise our shoes. Consisting of two perfectly sized parallelepipeds, this box is designed to hold one shoe on the left side and one on the right side.</p>
+  <p>Made of high-quality materials, the box has an elegant and sophisticated ivory finish. The two parts of the box attach via an ingenious tab system, ensuring a secure and protective closure for your shoes.</p>
+  <p>The parallelepiped dimensions have been carefully calibrated to fit most shoe sizes, allowing you to comfortably transport shoes of all sizes. In addition, the box's clever design reduces the space occupied in your luggage, allowing you to optimise organisation during your travels.</p>
+  <p>In addition to its functionality, the 'Two Steps' box stands out for its elegant and refined appearance. The ivory colour lends a touch of class, while the two-part attachment system adds an element of interest and practicality.</p>
+  <p>By choosing the 'Two Steps' box, you not only protect your shoes during transport, but also enhance their style and presence. Every detail has been taken care of to offer you the best possible experience, from the quality of the materials to the ease of use.</p>
+  <p>Face your journeys and your daily routine with assurance and sophistication. Organise your shoes in a practical and worry-free way, enjoying the advantage of having everything you need at your fingertips.</p>
+  <p>Choose the 'Two Steps' box and experience an innovative solution for transporting and organising your shoes.</p>
+</section>
+
+<section class="pros">
+    <h2>Advantages</h2>
+    <p>• Advanced protection</p>
+    <p>• Maximum organisation</p>
+  <p>• Space-saving</p>
+  <p>• Easy transport</p>
+  <p>• Elegant design</p>
+  <p>• Quality materials</p>
+<p>• Eco-friendly</p>  
+</section>
+
+  <footer>
+    <p>&copy; 2023 Innovative shoe boxes. All rights reserved</p>
+  </footer>
+</body>
+</html>
+
+
+
+
+
+
+
+
